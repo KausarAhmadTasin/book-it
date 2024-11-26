@@ -1,3 +1,7 @@
+import Destinations from "@/components/layouts/Destinations/Destinations";
+
 export default function Home() {
-  return <div>BookIt</div>;
+  return <div>
+    <Destinations></Destinations>
+  </div>;
 }
