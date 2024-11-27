@@ -1,3 +1,9 @@
+import ContactSection from "@/components/layouts/ContactSection/ContactSection";
+
 export default function Home() {
-  return <div>BookIt</div>;
+  return (
+    <div>
+      <ContactSection />
+    </div>
+  );
 }
