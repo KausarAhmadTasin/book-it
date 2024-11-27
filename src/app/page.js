@@ -1,3 +1,9 @@
+import FeaturedRooms from "@/components/layouts/FeaturedRooms/FeaturedRooms";
+
 export default function Home() {
-  return <div>BookIt</div>;
+  return (
+    <div>
+      <FeaturedRooms />
+    </div>
+  );
 }
