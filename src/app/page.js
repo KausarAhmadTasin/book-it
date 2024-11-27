@@ -1,11 +1,17 @@
+
 import ContactSection from "@/components/layouts/ContactSection/ContactSection";
 import HotelHighlights from "@/components/layouts/HotelHighlights/HotelHighlights";
+import FeaturedRooms from "@/components/layouts/FeaturedRooms/FeaturedRooms";
 
+
+   
 export default function Home() {
   return (
-    <div className="max-w-[1240px] mx-auto px-4">
-      <HotelHighlights />
+    <div>
+      <FeaturedRooms />
+     <HotelHighlights />
       <ContactSection />
+
     </div>
   );
 }
