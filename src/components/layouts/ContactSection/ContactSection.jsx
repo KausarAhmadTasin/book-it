@@ -1,7 +1,7 @@
 const ContactSection = () => {
   return (
     <>
-      <section className="w-full grid grid-cols-1 lg:grid-cols-2 gap-[30px] boxShadow p-[40px] rounded-xl">
+      <section className="w-full grid grid-cols-1 lg:grid-cols-2 gap-[30px] boxShadow my-10 rounded-xl">
         <form className="w-full">
           <div className="text-gray-800">
             <h1 className="text-[2rem] font-[600] leading-[35px]">
