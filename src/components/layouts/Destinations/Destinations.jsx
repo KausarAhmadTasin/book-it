@@ -34,7 +34,7 @@ const Destinations = () => {
               <div className="w-52 h-60 lg:ml-20 md:-ml-28 rounded-[90px] overflow-hidden shadow-lg bg-white border-[22px] border-white">
                 <img
                   src="https://res.cloudinary.com/dvubt5hiv/image/upload/v1732645531/o470h09p2ukpytv2k4zj.jpg"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover "
                   alt="Circular Travel"
                 />
               </div>
@@ -85,18 +85,18 @@ const Destinations = () => {
       </div>
 
       <div className="flex items-center flex-col md:flex-row">
-        <div className="w-full md:w-1/2 lg:pl-44 px-4 mb-8 md:mb-0">
+        <div className="w-full md:w-1/2 lg:pl-48 px-4 mb-8 md:mb-0">
           <div className="flex flex-col items-start p-6 bg-white rounded-lg max-w-sm mx-auto">
             <span className="text-sm font-bold uppercase text-red-500 tracking-wider mb-2">Destination List</span>
-            <h1 className="text-2xl font-bold text-gray-800 mb-4">
+            <h1 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-4">
               Explore the Beautiful Places Around World
             </h1>
             <p className="text-sm text-gray-500 mb-6">
               Flexible Classes refers to the process of acquiring knowledge freely.
             </p>
-            <button className="px-4 py-2 bg-gray-800 text-white text-sm font-semibold rounded hover:bg-gray-700 transition duration-200">
-              Discover More
-            </button>
+            <button className="mt-4 px-6 py-2 bg-red-500 text-white rounded-md hover:bg-red-600">
+                Discover More
+              </button>
           </div>
         </div>
 
