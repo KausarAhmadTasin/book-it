@@ -39,7 +39,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="w-full fixed z-50 py-4 bg-accent select-none">
+    <nav className="w-full fixed z-10 py-4 bg-accent select-none shadow-accent/60">
       <div className="md:container md:mx-auto mx-3 flex items-center justify-between">
         <div className="flex items-center gap-4">
           {/* Hamburger icon */}
@@ -117,7 +117,7 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
-    </div>
+    </nav>
   );
 };
 

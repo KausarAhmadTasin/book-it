@@ -8,17 +8,14 @@ import Banner from "@/components/layouts/Banner/Banner";
 
 export default function Home() {
   return (
-    <div>
+    <main>
       <Banner />
-      <div className="container mx-auto">
-        {" "}
-        <FeaturedRooms />
-        <HotelHighlights />
-        <Destinations />
-        <ContactSection />
-        <Testimonials></Testimonials>
-        <Footer></Footer>
-      </div>
-    </div>
+      <FeaturedRooms />
+      <HotelHighlights />
+      <Destinations />
+      <ContactSection />
+      <Testimonials></Testimonials>
+      <Footer></Footer>
+    </main>
   );
 }
