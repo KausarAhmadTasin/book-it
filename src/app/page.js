@@ -8,7 +8,7 @@ import Banner from "@/components/layouts/Banner/Banner";
 
 export default function Home() {
   return (
-    <div>
+    <main>
       <Banner />
       <FeaturedRooms />
       <HotelHighlights />
@@ -16,6 +16,6 @@ export default function Home() {
       <ContactSection />
       <Testimonials></Testimonials>
       <Footer></Footer>
-    </div>
+    </main>
   );
 }

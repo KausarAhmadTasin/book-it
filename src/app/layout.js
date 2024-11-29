@@ -30,7 +30,6 @@ export default function RootLayout({ children }) {
           <Navbar />
         </div>
         <div className="pt-20">
-          {" "}
           {/* Adjust padding to match navbar height */}
           {children}
         </div>
