@@ -22,6 +22,16 @@ const nextConfig = {
         hostname: "i.postimg.cc",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "example.com",
+        port: "",
+      },
     ],
   },
 };

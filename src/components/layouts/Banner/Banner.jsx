@@ -37,11 +37,11 @@ const Banner = () => {
       <div className="absolute inset-0 bg-black bg-opacity-55"></div>
 
       {/* Content Section */}
-      <div className="relative z-10 text-center mt-20 select-none text-white px-4">
+      <div className="relative text-center mt-20 select-none text-white px-4">
         <h1 className={`text-4xl md:text-7xl ${tangerine.className}`}>
-          BookIt
+          From Check-in to Bliss
         </h1>
-        <p className="mt-4 text-lg md:text-2xl font-light">
+        <p className="mt-4 text-lg md:text-2xl font-extralight">
           Discover the best stays for your next adventure.
         </p>
         <p className="mt-2 text-md md:text-lg">

@@ -4,107 +4,48 @@ import { FaLocationDot } from "react-icons/fa6";
 import { MdOutlineStarPurple500 } from "react-icons/md";
 import { MdAccessTimeFilled } from "react-icons/md";
 import { BsFillInfoCircleFill } from "react-icons/bs";
+import { useEffect, useState } from "react";
+import { FaTrashAlt } from "react-icons/fa"; // Import trash icon for delete button
 
 const FeaturedRooms = () => {
-  // Custom Room Data
-  const roomsData = [
-    {
-      id: "1",
-      name: "Luxury Suite Apartment",
-      price: 160,
-      address: "123 Wallaby Avenue, Park Road",
-      status: "available",
-      amenities: {
-        parking: "2 spaces",
-        bathroom: "2 rooms",
-        bedroom: "4 rooms",
-      },
-      image_url:
-        "https://i.postimg.cc/cCH0LSNG/luxury-bedroom-suite-resort-high-rise-hotel-with-working-table.jpg",
-      description:
-        "Experience luxury at its finest in this spacious suite, complete with modern decor, a private balcony, and expansive city views. Perfect for those who desire both comfort and elegance.",
-    },
-    {
-      id: "2",
-      name: "Modern Penthouse",
-      price: 180,
-      address: "789 Skyline Blvd, City Center",
-      status: "available",
-      amenities: {
-        parking: "3 spaces",
-        bathroom: "3 rooms",
-        bedroom: "5 rooms",
-      },
-      image_url:
-        "https://i.postimg.cc/sDrMsBMp/francesca-tosolini-t-Hk-JAMc-O3-QE-unsplash.jpg",
-      description:
-        "This stunning penthouse offers breathtaking views of the skyline, modern design, and expansive living spaces. With luxurious bedrooms and a rooftop terrace, it's ideal for high-end living.",
-    },
-    {
-      id: "3",
-      name: "Cozy Studio Apartment",
-      price: 150,
-      address: "456 Maple Street, Green View",
-      status: "booked",
-      amenities: {
-        parking: "1 space",
-        bathroom: "1 room",
-        bedroom: "1 room",
-      },
-      image_url:
-        "https://i.postimg.cc/053Cf0H9/wes-hicks-MEL-j-Jnm7-RQ-unsplash.jpg",
-      description:
-        "A charming and compact studio, perfect for individuals or couples looking for a cozy, functional space. Located in a quiet neighborhood, this apartment is designed for both comfort and convenience.",
-    },
-    {
-      id: "4",
-      name: "Oceanfront Villa",
-      price: 200,
-      address: "321 Ocean Drive, Beachfront",
-      status: "available",
-      amenities: {
-        parking: "4 spaces",
-        bathroom: "4 rooms",
-        bedroom: "6 rooms",
-      },
-      image_url:
-        "https://i.postimg.cc/jdPkn1qp/long-nguyen-o9ye4v-Vm-Ft0-unsplash.jpg",
-      description:
-        "This luxurious oceanfront villa offers panoramic sea views, a private pool, and modern design. Ideal for those seeking an exclusive getaway in a serene and private setting.",
-    },
-    {
-      id: "5",
-      name: "Spacious Family Suite",
-      price: 170,
-      address: "987 River Road, Green Valley",
-      status: "booked",
-      amenities: {
-        parking: "2 spaces",
-        bathroom: "2 rooms",
-        bedroom: "3 rooms",
-      },
-      image_url:
-        "https://i.postimg.cc/2j44QNv7/photorealistic-wooden-house-interior-with-timber-decor-furnishings.jpg",
-      description:
-        "Perfect for families, this suite offers spacious living with separate rooms for parents and children, a cozy living area, and a fully equipped kitchen. Great for a comfortable and enjoyable family vacation.",
-    },
-    {
-      id: "6",
-      name: "Charming Cottage",
-      price: 140,
-      address: "654 Country Lane, Countryside",
-      status: "available",
-      amenities: {
-        parking: "2 spaces",
-        bathroom: "1 room",
-        bedroom: "2 rooms",
-      },
-      image_url:
-        "https://i.postimg.cc/LXFJ5hyK/rustic-cottage-forest-glows-with-lantern-light-generated-by-ai.jpg",
-      description:
-        "This quaint cottage is nestled in the countryside, offering a peaceful retreat with rustic charm. Perfect for couples or small families looking to escape the hustle and bustle of city life.",
-    },
-  ];
+  const [roomsData, setRoomsData] = useState([]);
+
+  // Fetch room data from API
+  useEffect(() => {
+    const fetchRooms = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/rooms");
+        const data = await response.json();
+        setRoomsData(data); // Update state with the fetched room data
+      } catch (error) {
+        console.log("Error fetching rooms data:", error);
+      }
+    };
+    fetchRooms();
+  }, []);
+
+  // Function to handle delete action
+  const handleDelete = async (roomId) => {
+    try {
+      const response = await fetch(
+        `http://localhost:3000/api/rooms/${roomId}`,
+        {
+          method: "DELETE",
+        }
+      );
+
+      if (response.ok) {
+        alert("Room deleted successfully!");
+        setRoomsData(roomsData.filter((room) => room._id !== roomId));
+      } else {
+        const errorData = await response.json();
+        alert(`Error: ${errorData.message}`);
+      }
+    } catch (error) {
+      console.error("Error deleting room:", error);
+      alert("An error occurred while deleting the room.");
+    }
+  };
 
   return (
     <section className="pb-16 bg-base-200">
@@ -121,21 +62,21 @@ const FeaturedRooms = () => {
       {/* Cards */}
       <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center container mx-auto px-4">
         {roomsData.map((room) => (
-          <div key={room.id} className="shadow-2xl">
+          <div key={room._id} className="shadow-2xl">
             <div className="w-full shadow-lg rounded-xl">
               <div className="flex w-full justify-between items-center px-4 py-6">
                 <div className="flex items-center gap-4">
                   <div>
                     <h2 className="font-semibold text-[#231F1C] tracking-wide text-2xl">
-                      {room.name}
+                      {room.roomType}
                     </h2>
                   </div>
                 </div>
               </div>
               <div className="relative overflow-hidden group cursor-pointer rounded-md">
                 <Image
-                  src={room.image_url}
-                  alt={room.name}
+                  src={room.images[0]}
+                  alt={room.roomType}
                   className="w-full h-[350px] object-cover group-hover:scale-[1.1] transition-all duration-500"
                   width={400}
                   height={350}
@@ -145,17 +86,17 @@ const FeaturedRooms = () => {
                 <div className="bg-[#E9F3F4] hover:bg-[#083247] transition-all duration-500 hover:text-white ease-out hover:scale-105 hover:transition-all hover:duration-500  mx-auto rounded-lg py-2">
                   <div className="flex gap-2 items-center justify-start py-2 px-6">
                     <MdOutlineStarPurple500 className="text-lg" />
-                    <p>4.5 (30 reviews)</p>
+                    <p>{room.hotelRating}</p>
                   </div>
                   <div className="flex gap-2 items-center justify-start py-2 px-6">
                     <FaLocationDot className="mb-1" />
-                    <p>{room.address}</p>
+                    <p>{room.address.city}</p>
                   </div>
                   <hr />
                   <div className="flex items-center justify-between">
                     <div className="flex gap-2 items-center justify-start py-2 px-6">
                       <MdAccessTimeFilled />
-                      <p>3 Day </p>
+                      <p>3 Day</p>
                     </div>
                     <div className="py-2 px-6 text-2xl font-bold">
                       <p>${room.price}</p>
@@ -171,6 +112,16 @@ const FeaturedRooms = () => {
                   <p className="text-sm font-bold capitalize tracking-wide">
                     {room.status}
                   </p>
+                </div>
+                {/* Delete Button */}
+                <div className="flex justify-center">
+                  <button
+                    onClick={() => handleDelete(room._id)} // Trigger the delete function
+                    className="bg-red-500 text-white px-4 py-2 rounded-full flex items-center gap-2 hover:bg-red-700 transition-all duration-300"
+                  >
+                    <FaTrashAlt className="text-xl" />
+                    <span>Delete</span>
+                  </button>
                 </div>
                 <div>
                   <button

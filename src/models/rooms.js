@@ -32,4 +32,6 @@ const RoomSchema = new mongoose.Schema({
   tags: [String],
 });
 
-export default mongoose.models.Room || mongoose.model("Room", RoomSchema);
+const Room = mongoose.models.Room || mongoose.model("Room", RoomSchema);
+
+export default Room;
