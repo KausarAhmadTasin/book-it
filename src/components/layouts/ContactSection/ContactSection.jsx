@@ -8,7 +8,7 @@ const ContactSection = () => {
               Get in <span className="text-[#2e8e9e]">touch</span>
             </h1>
             <p className="text-[0.9rem] mt-2 mb-8">
-              Let's make your travel dreams a reality! Reach out and let the
+              Let&apos;s make your travel dreams a reality! Reach out and let the
               journey to unforgettable stays and experiences begin.
             </p>
           </div>
