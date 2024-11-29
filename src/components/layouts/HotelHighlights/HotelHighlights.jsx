@@ -18,8 +18,7 @@ const HotelHighlights = () => {
       roomType: "Executive Suite",
       description:
         "An elegant apartment offering panoramic city views and modern comforts.",
-      image_url:
-        "https://i.postimg.cc/cCH0LSNG/luxury-bedroom-suite-resort-high-rise-hotel-with-working-table.jpg",
+      image_url: "https://i.postimg.cc/RZZPSKSy/landscape-modern-city.jpg",
       amenities: [
         "WiFi",
         "Air Conditioning",
@@ -59,8 +58,7 @@ const HotelHighlights = () => {
       roomType: "Beach Villa",
       description:
         "A luxurious beachfront villa with direct access to the sandy shores.",
-      image_url:
-        "https://i.postimg.cc/cCH0LSNG/luxury-bedroom-suite-resort-high-rise-hotel-with-working-table.jpg",
+      image_url: "https://i.postimg.cc/x8VxnZ83/swimming-pool.jpg",
       amenities: ["WiFi", "Air Conditioning", "TV", "Private Pool", "Jacuzzi"],
       maxOccupancy: 4,
       bedType: "Queen",
@@ -95,7 +93,7 @@ const HotelHighlights = () => {
       description:
         "A charming alpine cabin with rustic décor and breathtaking mountain views.",
       image_url:
-        "https://i.postimg.cc/cCH0LSNG/luxury-bedroom-suite-resort-high-rise-hotel-with-working-table.jpg",
+        "https://i.postimg.cc/sXk81X6S/long-shot-facade-cabin-alpe-d-huez-ski-resort-french-alps-sunrise.jpg",
       amenities: ["WiFi", "Fireplace", "TV", "Hot Tub", "Ski-In/Ski-Out"],
       maxOccupancy: 2,
       bedType: "Queen",
