@@ -42,7 +42,7 @@ const Page = () => {
   if (error) return <div>{error}</div>;
 
   return (
-    <section className="container pb-16 bg-base-200">
+    <section className="container mx-auto pb-16 bg-base-200">
     <div className="py-8">
       <h3 className="text-2xl md:text-3xl text-center text-[#083247] font-semibold pb-4">
         Featured Rooms
@@ -92,12 +92,12 @@ const Page = () => {
                   <p>{`${room.address.street}, ${room.address.city}, ${room.address.country} - ${room.address.zipCode}`}</p>
                 </div>
                 <hr />
-                <div className="flex items-center justify-between py-4 px-4 md:px-6">
-                <div className="flex gap-2 items-center justify-start py-2 px-6">
+                <div className="flex items-center justify-between py-2 px-6">
+                <div className="flex gap-2 items-center justify-start">
                       <MdAccessTimeFilled />
                       <p>3 Day </p>
                     </div>
-                  <div className="py-2 px-6 text-lg md:text-2xl font-bold">
+                  <div className="text-lg md:text-2xl font-bold py-2 px-6">
                     <p>${room.pricePerNight}</p>
                   </div>
                 </div>

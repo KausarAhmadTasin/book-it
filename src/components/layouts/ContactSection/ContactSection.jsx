@@ -1,6 +1,6 @@
 const ContactSection = () => {
   return (
-    <>
+    <div className="container mx-auto px-4 lg:px-0">
       <section className="w-full grid grid-cols-1 lg:grid-cols-2 gap-[30px] boxShadow my-10 rounded-xl">
         <form className="w-full">
           <div className="text-gray-800">
@@ -56,7 +56,7 @@ const ContactSection = () => {
           ></iframe>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

@@ -3,7 +3,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 const Footer = () => {
   return   <footer className="bg-[#083246] text-white py-16">
   {/* First row */}
-  <div className="container mx-auto px-28 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+  <div className="container mx-auto px-4 md:px-12 lg:px-28 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
     <div>
       <h3 className="text-xl font-semibold mb-4">About Us</h3>
       <p className="mb-2">About Us</p>
