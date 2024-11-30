@@ -17,7 +17,6 @@ export default function Home() {
         <Destinations />
         <ContactSection />
         <Testimonials></Testimonials>
-        <Footer></Footer>
       </div>
     </main>
   );

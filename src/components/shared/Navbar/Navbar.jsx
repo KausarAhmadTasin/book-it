@@ -6,38 +6,40 @@ import { HiBars3BottomLeft } from "react-icons/hi2";
 import { IoCloseOutline } from "react-icons/io5";
 import { IoMdArrowDropdownCircle } from "react-icons/io";
 import { tangerine } from "@/components/layouts/Banner/Banner";
+import { useSession, signOut } from "next-auth/react";
+
+const navlinks = [
+  {
+    title: "Home",
+    path: "/",
+  },
+  {
+    title: "All Rooms",
+    path: "/allRooms",
+  },
+  {
+    title: "Add Rooms",
+    path: "/createRooms",
+  },
+  {
+    title: "Hotels",
+    path: "/hotels",
+  },
+  {
+    title: "About",
+    path: "/about",
+  },
+  {
+    title: "Dashboard",
+    path: "/dashboard",
+  },
+];
 
 const Navbar = () => {
   const [isOpenDrawer, setIsOpenDrwer] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
-
-  const navlinks = [
-    {
-      title: "Home",
-      path: "/",
-    },
-    {
-      title: "All Rooms",
-      path: "/allRooms",
-    },
-    {
-      title: "Add Rooms",
-      path: "/createRooms",
-    },
-    {
-      title: "Hotels",
-      path: "/hotels",
-    },
-    {
-      title: "About",
-      path: "/about",
-    },
-    {
-      title: "Dashboard",
-      path: "/dashboard",
-    },
-  ];
-
+  const session = useSession();
+  console.log(session);
   return (
     <nav className="w-full fixed z-10 py-4 bg-accent select-none shadow-accent/60">
       <div className="md:container md:mx-auto mx-3 flex items-center justify-between">
@@ -78,6 +80,23 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* Login sign in */}
+          <div className="flex items-center gap-4">
+            {/* Links to login and sign-up */}
+            <Link href={"/login"}>
+              <button className="px-4 py-2 text-sm text-white bg-green-500 rounded hover:bg-green-600">
+                Login
+              </button>
+            </Link>
+
+            <Link
+              href="/signup"
+              className="px-4 py-2 text-sm text-white bg-blue-500 rounded hover:bg-blue-600"
+            >
+              Sign Up
+            </Link>
           </div>
           {/* Profile Image */}
           <div className="relative ">
