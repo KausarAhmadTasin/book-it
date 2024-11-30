@@ -1,6 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar/Navbar";
+import AuthProvider from "@/services/AuthProvider";
+import Footer from "@/components/shared/Footer/Footer";
 // import 'animate.css';
 
 const geistSans = localFont({
@@ -25,14 +27,17 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="">
-          {/* Navbar Content */}
-          <Navbar />
-        </div>
-        <div className="pt-20">
-          {/* Adjust padding to match navbar height */}
-          {children}
-        </div>
+        <AuthProvider>
+          <div className="">
+            {/* Navbar Content */}
+            <Navbar />
+          </div>
+          <div className="pt-20">
+            {/* Adjust padding to match navbar height */}
+            {children}
+            <Footer />
+          </div>
+        </AuthProvider>
       </body>
     </html>
   );

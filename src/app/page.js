@@ -10,12 +10,14 @@ export default function Home() {
   return (
     <main>
       <Banner />
-      <FeaturedRooms />
-      <HotelHighlights />
-      <Destinations />
-      <ContactSection />
-      <Testimonials></Testimonials>
-      <Footer></Footer>
+      <div className="container mx-auto">
+        {" "}
+        <FeaturedRooms />
+        <HotelHighlights />
+        <Destinations />
+        <ContactSection />
+        <Testimonials></Testimonials>
+      </div>
     </main>
   );
 }

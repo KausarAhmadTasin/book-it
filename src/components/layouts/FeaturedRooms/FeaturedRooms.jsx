@@ -4,221 +4,49 @@ import { FaLocationDot } from "react-icons/fa6";
 import { MdOutlineStarPurple500 } from "react-icons/md";
 import { MdAccessTimeFilled } from "react-icons/md";
 import { BsFillInfoCircleFill } from "react-icons/bs";
+import { useEffect, useState } from "react";
+import { FaTrashAlt } from "react-icons/fa"; // Import trash icon for delete button
 import Link from "next/link";
 
 const FeaturedRooms = () => {
-  // Custom Room Data
-  const roomsData = [
-    {
-      _id: "01",
-      roomId: "room1",
-      hotelName: "Luxury Suite Apartment",
-      address: {
-        street: "123 Main Street",
-        city: "Los Angeles",
-        country: "USA",
-        zipCode: "90001",
-      },
-      roomType: "Deluxe Suite",
-      description:
-        "A spacious deluxe suite with stunning sea views and modern amenities.",
-      image_url:
-        "https://i.postimg.cc/cCH0LSNG/luxury-bedroom-suite-resort-high-rise-hotel-with-working-table.jpg",
-      amenities: ["WiFi", "Air Conditioning", "TV", "Mini Bar", "Room Service"],
-      maxOccupancy: 3,
-      bedType: "King",
-      status: "booked",
-      size: "500 sqft",
-      view: "Sea View",
-      price: 250,
-      discount: 20,
-      available: true,
-      availabilityDates: ["2024-11-27", "2024-11-28", "2024-12-01"],
-      cancellationPolicy: "Free cancellation up to 24 hours before check-in.",
-      hotelContact: {
-        phone: "+1-234-567-890",
-        email: "contact@grandpalacehotel.com",
-      },
-      hotelRating: 4.8,
-      hotelReviews: 30,
-      extras: ["Breakfast included", "Airport transfer"],
-      tags: ["Luxury", "Family Friendly", "Beachfront"],
-    },
-    {
-      _id: "2",
-      roomId: "room2",
-      hotelName: "Modern Penthouse",
-      address: {
-        street: "456 Beach Avenue",
-        city: "Miami",
-        country: "USA",
-        zipCode: "33139",
-      },
-      roomType: "Executive Room",
-      description:
-        "A luxurious executive room with a breathtaking beach view and premium facilities.",
-      image_url:
-        "https://i.postimg.cc/sDrMsBMp/francesca-tosolini-t-Hk-JAMc-O3-QE-unsplash.jpg",
-      amenities: ["WiFi", "Air Conditioning", "TV", "Coffee Maker", "Balcony"],
-      maxOccupancy: 2,
-      bedType: "Queen",
-      status: "available",
-      size: "400 sqft",
-      view: "Beach View",
-      price: 180,
-      discount: 10,
-      available: true,
-      availabilityDates: ["2024-11-27", "2024-11-28", "2024-11-30"],
-      cancellationPolicy: "Free cancellation up to 48 hours before check-in.",
-      hotelContact: {
-        phone: "+1-305-678-1234",
-        email: "info@oceanbreezeresort.com",
-      },
-      hotelRating: 4.5,
-      hotelReviews: 26,
-      extras: ["Breakfast included"],
-      tags: ["Luxury", "Romantic", "Beachfront"],
-    },
-    {
-      _id: "3",
-      roomId: "room3",
-      hotelName: "Cozy Studio Apartment",
-      address: {
-        street: "789 Highland Road",
-        city: "Denver",
-        country: "USA",
-        zipCode: "80202",
-      },
-      roomType: "Honeymoon Suite",
-      description:
-        "A charming suite with a cozy fireplace and stunning mountain views.",
-      image_url:
-        "https://i.postimg.cc/053Cf0H9/wes-hicks-MEL-j-Jnm7-RQ-unsplash.jpg",
-      amenities: ["WiFi", "Fireplace", "TV", "Hot Tub", "Room Service"],
-      maxOccupancy: 2,
-      bedType: "King",
-      status: "available",
-      size: "600 sqft",
-      view: "Mountain View",
-      price: 300,
-      discount: 15,
-      available: true,
-      availabilityDates: ["2024-11-29", "2024-11-30", "2024-12-01"],
-      cancellationPolicy: "Free cancellation up to 24 hours before check-in.",
-      hotelContact: {
-        phone: "+1-720-234-5678",
-        email: "stay@mountainbliss.com",
-      },
-      hotelRating: 4.2,
-      hotelReviews: 42,
-      extras: ["Breakfast included", "Spa access"],
-      tags: ["Romantic", "Mountain Retreat", "Luxury"],
-    },
-    {
-      _id: "4",
-      roomId: "room4",
-      hotelName: "Oceanfront Villa",
-      address: {
-        street: "321 Ocean Drive",
-        city: "San Diego",
-        country: "USA",
-        zipCode: "92101",
-      },
-      roomType: "Luxury Villa",
-      description:
-        "A private villa offering unparalleled oceanfront views and lavish amenities.",
-      image_url:
-        "https://i.postimg.cc/jdPkn1qp/long-nguyen-o9ye4v-Vm-Ft0-unsplash.jpg",
-      amenities: ["WiFi", "Air Conditioning", "TV", "Private Pool", "Jacuzzi"],
-      maxOccupancy: 6,
-      bedType: "Multiple",
-      status: "booked",
-      size: "1200 sqft",
-      view: "Oceanfront",
-      price: 800,
-      discount: 25,
-      available: true,
-      availabilityDates: ["2024-12-01", "2024-12-02"],
-      cancellationPolicy: "Non-refundable",
-      hotelContact: {
-        phone: "+1-619-234-5678",
-        email: "contact@oceanvillaresort.com",
-      },
-      hotelRating: 4.9,
-      extras: ["Private chef service", "Daily housekeeping"],
-      tags: ["Luxury", "Private", "Beachfront"],
-    },
-    {
-      _id: "5",
-      roomId: "room5",
-      hotelName: "Spacious Family Suite",
-      address: {
-        street: "654 Park Avenue",
-        city: "New York",
-        country: "USA",
-        zipCode: "10022",
-      },
-      roomType: "Family Suite",
-      description:
-        "A spacious family suite with modern design and kid-friendly amenities.",
-      image_url:
-        "https://i.postimg.cc/2j44QNv7/photorealistic-wooden-house-interior-with-timber-decor-furnishings.jpg",
-      amenities: ["WiFi", "Air Conditioning", "TV", "Kids Area", "Mini Bar"],
-      maxOccupancy: 4,
-      bedType: "Double and Twin",
-      status: "available",
-      size: "700 sqft",
-      view: "City View",
-      price: 300,
-      discount: 15,
-      available: true,
-      availabilityDates: ["2024-11-27", "2024-11-28"],
-      cancellationPolicy: "Free cancellation up to 48 hours before check-in.",
-      hotelContact: {
-        phone: "+1-212-567-8901",
-        email: "family@cityhotel.com",
-      },
-      hotelRating: 4.8,
-      hotelReviews: 22,
-      extras: ["Breakfast included", "Late checkout"],
-      tags: ["Family Friendly", "Urban", "Spacious"],
-    },
-    {
-      _id: "6",
-      roomId: "room6",
-      hotelName: "Charming Cottage",
-      address: {
-        street: "987 Forest Trail",
-        city: "Aspen",
-        country: "USA",
-        zipCode: "81611",
-      },
-      roomType: "Rustic Cottage",
-      description:
-        "A cozy rustic cottage nestled in the woods with picturesque surroundings.",
-      image_url:
-        "https://i.postimg.cc/LXFJ5hyK/rustic-cottage-forest-glows-with-lantern-light-generated-by-ai.jpg",
-      amenities: ["WiFi", "Fireplace", "TV", "Outdoor Seating", "Pet Friendly"],
-      maxOccupancy: 4,
-      bedType: "Queen and Sofa Bed",
-      status: "available",
-      size: "800 sqft",
-      view: "Forest View",
-      price: 250,
-      discount: 10,
-      available: true,
-      availabilityDates: ["2024-11-29", "2024-11-30", "2024-12-01"],
-      cancellationPolicy: "Free cancellation up to 72 hours before check-in.",
-      hotelContact: {
-        phone: "+1-970-456-7890",
-        email: "reservations@forestcottage.com",
-      },
-      hotelRating: 4.3,
-      hotelReviews: 57,
-      extras: ["Breakfast included", "Hiking guides"],
-      tags: ["Nature Retreat", "Cozy", "Pet Friendly"],
-    },
-  ];
+  const [roomsData, setRoomsData] = useState([]);
+
+  // Fetch room data from API
+  useEffect(() => {
+    const fetchRooms = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/rooms");
+        const data = await response.json();
+        setRoomsData(data); // Update state with the fetched room data
+      } catch (error) {
+        console.log("Error fetching rooms data:", error);
+      }
+    };
+    fetchRooms();
+  }, []);
+
+  // Function to handle delete action
+  const handleDelete = async (roomId) => {
+    try {
+      const response = await fetch(
+        `http://localhost:3000/api/rooms/${roomId}`,
+        {
+          method: "DELETE",
+        }
+      );
+
+      if (response.ok) {
+        alert("Room deleted successfully!");
+        setRoomsData(roomsData.filter((room) => room._id !== roomId));
+      } else {
+        const errorData = await response.json();
+        alert(`Error: ${errorData.message}`);
+      }
+    } catch (error) {
+      console.error("Error deleting room:", error);
+      alert("An error occurred while deleting the room.");
+    }
+  };
 
   return (
     <section className="pb-16 bg-base-200">
@@ -248,8 +76,8 @@ const FeaturedRooms = () => {
               </div>
               <div className="relative overflow-hidden group cursor-pointer rounded-md">
                 <Image
-                  src={room.image_url}
-                  alt={room.hotelName}
+                  src={room.images[0]}
+                  alt={room.roomType}
                   className="w-full h-[350px] object-cover group-hover:scale-[1.1] transition-all duration-500"
                   width={400}
                   height={350}
@@ -259,19 +87,17 @@ const FeaturedRooms = () => {
                 <div className="bg-[#E9F3F4] hover:bg-[#083247] transition-all duration-500 hover:text-white ease-out hover:scale-105 hover:transition-all hover:duration-500  mx-auto rounded-lg py-2">
                   <div className="flex gap-2 items-center justify-start py-2 px-6">
                     <MdOutlineStarPurple500 className="text-lg" />
-                    <p>
-                      {room.hotelRating} ({room.hotelReviews} reviews)
-                    </p>
+                    <p>{room.hotelRating}</p>
                   </div>
                   <div className="flex gap-2 items-center justify-start py-2 px-6">
                     <FaLocationDot className="mb-1" />
-                    <p>{`${room.address.street}, ${room.address.city}, ${room.address.country}`}</p>
+                    <p>{room.address.city}</p>
                   </div>
                   <hr />
                   <div className="flex items-center justify-between">
                     <div className="flex gap-2 items-center justify-start py-2 px-6">
                       <MdAccessTimeFilled />
-                      <p>3 Nights</p>
+                      <p>3 Day</p>
                     </div>
                     <div className="py-2 px-6 text-2xl font-bold">
                       <p>${room.price}</p>
@@ -287,6 +113,16 @@ const FeaturedRooms = () => {
                   <p className="text-sm font-bold capitalize tracking-wide">
                     {room.status}
                   </p>
+                </div>
+                {/* Delete Button */}
+                <div className="flex justify-center">
+                  <button
+                    onClick={() => handleDelete(room._id)} // Trigger the delete function
+                    className="bg-red-500 text-white px-4 py-2 rounded-full flex items-center gap-2 hover:bg-red-700 transition-all duration-300"
+                  >
+                    <FaTrashAlt className="text-xl" />
+                    <span>Delete</span>
+                  </button>
                 </div>
                 <div>
                   <Link href={`/room-details/${room._id}`}>
