@@ -6,6 +6,7 @@ import { MdAccessTimeFilled } from "react-icons/md";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import { FaTrashAlt } from "react-icons/fa"; // Import trash icon for delete button
+import Link from "next/link";
 
 const FeaturedRooms = () => {
   const [roomsData, setRoomsData] = useState([]);

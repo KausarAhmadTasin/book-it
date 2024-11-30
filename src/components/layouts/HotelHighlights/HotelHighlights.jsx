@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { MdEventAvailable } from "react-icons/md";
 
 const HotelHighlights = () => {
   // Hotel data
@@ -115,15 +117,18 @@ const HotelHighlights = () => {
   ];
 
   return (
-    <div className="my-10">
+    <section>
+ 
       <h1 className="font-bold text-2xl mb-3">
         Discover Your Perfect Stay: Hotels, Apartments & Resorts
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-10">
         <div className="w-full rounded-lg">
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1495365200479-c4ed1d35e1aa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="hotel"
+            width={400}
+            height={400}
             className="w-full h-[60%] object-cover rounded-lg "
           />
 
@@ -136,9 +141,11 @@ const HotelHighlights = () => {
           </div>
         </div>
         <div className="w-full rounded-lg  ">
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="apartment"
+            width={400}
+            height={400}
             className="w-full h-[60%] object-cover rounded-lg "
           />
 
@@ -154,9 +161,11 @@ const HotelHighlights = () => {
           </div>
         </div>
         <div className="w-full rounded-lg">
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="resort"
+            width={400}
+            height={400}
             className="w-full h-[60%] object-cover rounded-lg "
           />
 
