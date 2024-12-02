@@ -62,29 +62,29 @@ const ContactPage = () => {
                 type="text"
                 name="firstName"
                 placeholder="First name"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#231F1C]"
               />
               <input
                 type="text"
                 name="lastName"
                 placeholder="Last name"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#231F1C]"
               />
             </div>
             <input
               type="email"
               name="email"
               placeholder="Email"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#231F1C]"
             />
             <textarea
               name="message"
               placeholder="Your Message"
-              className="w-full h-32 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 resize-none"
+              className="w-full h-32 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#231F1C] resize-none"
             ></textarea>
             <button
               type="submit"
-              className="w-full md:w-auto bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded-md transition duration-300 ease-in-out"
+              className="w-full md:w-auto bg-[#231F1C] hover:bg-[#083247] text-white font-semibold py-2 px-6 rounded-md transition duration-300 ease-in-out"
             >
               Send Message
             </button>
@@ -170,7 +170,7 @@ const ContactPage = () => {
         </p>
         <button
           onClick={handleReadMore}
-          className="mt-3 px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700"
+          className="mt-3 px-4 py-2 bg-[#231F1C] text-white rounded hover:bg-[#083247]"
         >
           {showMore ? 'Show Less' : 'Read More'}
         </button>
