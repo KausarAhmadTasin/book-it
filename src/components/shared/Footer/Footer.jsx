@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaFacebook, FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 const Footer = () => {
@@ -6,21 +7,66 @@ const Footer = () => {
   <div className="container mx-auto px-28 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
     <div>
       <h3 className="text-xl font-semibold mb-4">About Us</h3>
-      <p className="mb-2">About Us</p>
-      <p className="mb-2">Contact</p>
-      <p className="mb-2">Careers</p>
+      <Link href="">
+        <p className="mb-2 cursor-pointer text-lg lg:mr-56 relative group">
+         About Us
+          <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#E9F3F4] transition-all duration-300 group-hover:w-full group-hover:h-[3px] "></span>
+        </p>
+      </Link>
+      <Link href="/contact">
+        <p className="mb-2 cursor-pointer text-lg lg:mr-60 relative group">
+          Contact
+          <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#E9F3F4] transition-all duration-300 group-hover:w-full group-hover:h-[3px] "></span>
+        </p>
+      </Link>
+      <Link href="">
+        <p className="mb-2 cursor-pointer text-lg lg:mr-60 relative group">
+        Careers
+          <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#E9F3F4] transition-all duration-300 group-hover:w-full group-hover:h-[3px] "></span>
+        </p>
+      </Link>
     </div>
     <div>
       <h3 className="text-xl font-semibold mb-4">Links</h3>
-      <p className="mb-2">Web Development</p>
-      <p className="mb-2">App Development</p>
-      <p className="mb-2">SEO Services</p>
+      <Link href="">
+        <p className="mb-2 cursor-pointer text-lg lg:mr-36 relative group">
+        Web Development
+          <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#E9F3F4] transition-all duration-300 group-hover:w-full group-hover:h-[3px] "></span>
+        </p>
+      </Link>
+      <Link href="/contact">
+        <p className="mb-2 cursor-pointer text-lg lg:mr-36 relative group">
+        App Development
+          <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#E9F3F4] transition-all duration-300 group-hover:w-full group-hover:h-[3px] "></span>
+        </p>
+      </Link>
+      <Link href="/contact">
+        <p className="mb-2 cursor-pointer text-lg lg:mr-44 relative group">
+        SEO Services
+          <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#E9F3F4] transition-all duration-300 group-hover:w-full group-hover:h-[3px] "></span>
+        </p>
+      </Link>
     </div>
     <div>
       <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
-      <p className="mb-2">Facebook</p>
-      <p className="mb-2">Twitter</p>
-      <p className="mb-2">LinkedIn</p>
+      <Link href="">
+        <p className="mb-2 cursor-pointer text-lg lg:mr-56 relative group">
+        Facebook
+          <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#E9F3F4] transition-all duration-300 group-hover:w-full group-hover:h-[3px] "></span>
+        </p>
+      </Link>
+      <Link href="">
+        <p className="mb-2 cursor-pointer text-lg lg:mr-60 relative group">
+          Contact
+          <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#E9F3F4] transition-all duration-300 group-hover:w-full group-hover:h-[3px] "></span>
+        </p>
+      </Link>
+      <Link href="">
+        <p className="mb-2 cursor-pointer text-lg lg:mr-60 relative group">
+        LinkedIn
+          <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#E9F3F4] transition-all duration-300 group-hover:w-full group-hover:h-[3px] "></span>
+        </p>
+      </Link>
     </div>
     <div className="text-center md:text-left">
       <h3 className="text-xl font-semibold mb-4 ">Join Our Community</h3>
