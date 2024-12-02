@@ -1,0 +1,209 @@
+{
+    "allRooms" : [
+        {
+          "roomId": "R001",
+          "hotelName": "Luxury Suite Apartment",
+          "address": {
+            "street": "123 Main Street",
+            "city": "Los Angeles",
+            "country": "USA",
+            "zipCode": "90001"
+          },
+          "roomType": "Deluxe Suite",
+          "description": "A spacious deluxe suite with stunning sea views and modern amenities.",
+          "images": [
+            "https://i.postimg.cc/cCH0LSNG/luxury-bedroom-suite-resort-high-rise-hotel-with-working-table.jpg",
+            "https://i.postimg.cc/sDrMsBMp/francesca-tosolini-t-Hk-JAMc-O3-QE-unsplash.jpg"
+          ],
+          "amenities": ["WiFi", "Air Conditioning", "TV", "Mini Bar", "Room Service"],
+          "maxOccupancy": 3,
+          "bedType": "King",
+          "status": "booked",
+          "size": "500 sqft",
+          "view": "Sea View",
+          "pricePerNight": 250,
+          "discount": 20,
+          "available": true,
+          "availabilityDates": ["2024-11-27", "2024-11-28", "2024-12-01"],
+          "cancellationPolicy": "Free cancellation up to 24 hours before check-in.",
+          "hotelContact": {
+            "phone": "+1-234-567-890",
+            "email": "contact@grandpalacehotel.com"
+          },
+          "hotelRating": 4.8,
+          "extras": ["Breakfast included", "Airport transfer"],
+          "tags": ["Luxury", "Family Friendly", "Beachfront"]
+        },
+        {
+          "roomId": "R002",
+          "hotelName": "Modern Penthouse",
+          "address": {
+            "street": "456 Beach Avenue",
+            "city": "Miami",
+            "country": "USA",
+            "zipCode": "33139"
+          },
+          "roomType": "Executive Room",
+          "description": "A luxurious executive room with a breathtaking beach view and premium facilities.",
+          "images": [
+            "https://i.postimg.cc/053Cf0H9/wes-hicks-MEL-j-Jnm7-RQ-unsplash.jpg",
+            "https://i.postimg.cc/jdPkn1qp/long-nguyen-o9ye4v-Vm-Ft0-unsplash.jpg"
+          ],
+          "amenities": ["WiFi", "Air Conditioning", "TV", "Coffee Maker", "Balcony"],
+          "maxOccupancy": 2,
+          "bedType": "Queen",
+          "status": "available",
+          "size": "400 sqft",
+          "view": "Beach View",
+          "pricePerNight": 180,
+          "discount": 10,
+          "available": true,
+          "availabilityDates": ["2024-11-27", "2024-11-28", "2024-11-30"],
+          "cancellationPolicy": "Free cancellation up to 48 hours before check-in.",
+          "hotelContact": {
+            "phone": "+1-305-678-1234",
+            "email": "info@oceanbreezeresort.com"
+          },
+          "hotelRating": 4.5,
+          "extras": ["Breakfast included"],
+          "tags": ["Luxury", "Romantic", "Beachfront"]
+        },
+        {
+          "roomId": "R003",
+          "hotelName": "Cozy Studio Apartment",
+          "address": {
+            "street": "789 Highland Road",
+            "city": "Denver",
+            "country": "USA",
+            "zipCode": "80202"
+          },
+          "roomType": "Honeymoon Suite",
+          "description": "A charming suite with a cozy fireplace and stunning mountain views.",
+          "images": [
+            "https://i.postimg.cc/2j44QNv7/photorealistic-wooden-house-interior-with-timber-decor-furnishings.jpg",
+            "https://i.postimg.cc/LXFJ5hyK/rustic-cottage-forest-glows-with-lantern-light-generated-by-ai.jpg"
+          ],
+          "amenities": ["WiFi", "Fireplace", "TV", "Hot Tub", "Room Service"],
+          "maxOccupancy": 2,
+          "bedType": "King",
+          "status": "available",
+          "size": "600 sqft",
+          "view": "Mountain View",
+          "pricePerNight": 300,
+          "discount": 15,
+          "available": true,
+          "availabilityDates": ["2024-11-29", "2024-11-30", "2024-12-01"],
+          "cancellationPolicy": "Free cancellation up to 24 hours before check-in.",
+          "hotelContact": {
+            "phone": "+1-720-234-5678",
+            "email": "stay@mountainbliss.com"
+          },
+          "hotelRating": 4.2,
+          "extras": ["Breakfast included", "Spa access"],
+          "tags": ["Romantic", "Mountain Retreat", "Luxury"]
+        },
+        {
+            "roomId": "R004",
+            "hotelName": "Oceanfront Villa",
+            "address": {
+              "street": "123 Main Street",
+              "city": "Los Angeles",
+              "country": "USA",
+              "zipCode": "90001"
+            },
+            "roomType": "Deluxe Suite",
+            "description": "A spacious deluxe suite with stunning sea views and modern amenities.",
+            "images": [
+              "https://i.postimg.cc/sDrMsBMp/francesca-tosolini-t-Hk-JAMc-O3-QE-unsplash.jpg",
+              "https://i.postimg.cc/sDrMsBMp/francesca-tosolini-t-Hk-JAMc-O3-QE-unsplash.jpg"
+            ],
+            "amenities": ["WiFi", "Air Conditioning", "TV", "Mini Bar", "Room Service"],
+            "maxOccupancy": 3,
+            "bedType": "King",
+            "status": "booked",
+            "size": "500 sqft",
+            "view": "Sea View",
+            "pricePerNight": 350,
+            "discount": 20,
+            "available": true,
+            "availabilityDates": ["2024-11-27", "2024-11-28", "2024-12-01"],
+            "cancellationPolicy": "Free cancellation up to 24 hours before check-in.",
+            "hotelContact": {
+              "phone": "+1-234-567-890",
+              "email": "contact@grandpalacehotel.com"
+            },
+            "hotelRating": 4.9,
+            "extras": ["Breakfast included", "Airport transfer"],
+            "tags": ["Luxury", "Family Friendly", "Beachfront"]
+          },
+          {
+            "roomId": "R005",
+            "hotelName": "Spacious Family Suite",
+            "address": {
+              "street": "123 Main Street",
+              "city": "Los Angeles",
+              "country": "USA",
+              "zipCode": "90001"
+            },
+            "roomType": "Deluxe Suite",
+            "description": "A spacious deluxe suite with stunning sea views and modern amenities.",
+            "images": [
+              "https://i.postimg.cc/jdPkn1qp/long-nguyen-o9ye4v-Vm-Ft0-unsplash.jpg",
+              "https://i.postimg.cc/sDrMsBMp/francesca-tosolini-t-Hk-JAMc-O3-QE-unsplash.jpg"
+            ],
+            "amenities": ["WiFi", "Air Conditioning", "TV", "Mini Bar", "Room Service"],
+            "maxOccupancy": 3,
+            "bedType": "King",
+            "status": "booked",
+            "size": "500 sqft",
+            "view": "Sea View",
+            "pricePerNight": 550,
+            "discount": 20,
+            "available": true,
+            "availabilityDates": ["2024-11-27", "2024-11-28", "2024-12-01"],
+            "cancellationPolicy": "Free cancellation up to 24 hours before check-in.",
+            "hotelContact": {
+              "phone": "+1-234-567-890",
+              "email": "contact@grandpalacehotel.com"
+            },
+            "hotelRating": 4.4,
+            "extras": ["Breakfast included", "Airport transfer"],
+            "tags": ["Luxury", "Family Friendly", "Beachfront"]
+          },
+          {
+            "roomId": "R006",
+            "hotelName": "Charming Cottage",
+            "address": {
+              "street": "123 Main Street",
+              "city": "Los Angeles",
+              "country": "USA",
+              "zipCode": "90001"
+            },
+            "roomType": "Deluxe Suite",
+            "description": "A spacious deluxe suite with stunning sea views and modern amenities.",
+            "images": [
+              "https://i.postimg.cc/LXFJ5hyK/rustic-cottage-forest-glows-with-lantern-light-generated-by-ai.jpg",
+              "https://i.postimg.cc/sDrMsBMp/francesca-tosolini-t-Hk-JAMc-O3-QE-unsplash.jpg"
+            ],
+            "amenities": ["WiFi", "Air Conditioning", "TV", "Mini Bar", "Room Service"],
+            "maxOccupancy": 3,
+            "bedType": "King",
+            "status": "booked",
+            "size": "500 sqft",
+            "view": "Sea View",
+            "pricePerNight": 600,
+            "discount": 20,
+            "available": true,
+            "availabilityDates": ["2024-11-27", "2024-11-28", "2024-12-01"],
+            "cancellationPolicy": "Free cancellation up to 24 hours before check-in.",
+            "hotelContact": {
+              "phone": "+1-234-567-890",
+              "email": "contact@grandpalacehotel.com"
+            },
+            "hotelRating": 4.8,
+            "extras": ["Breakfast included", "Airport transfer"],
+            "tags": ["Luxury", "Family Friendly", "Beachfront"]
+          }
+      ]
+      
+}
