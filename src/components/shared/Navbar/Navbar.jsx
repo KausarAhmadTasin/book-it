@@ -29,10 +29,6 @@ const navlinks = [
     title: "About",
     path: "/about",
   },
-  {
-    title: "Dashboard",
-    path: "/dashboard",
-  },
 ];
 
 const Navbar = () => {
