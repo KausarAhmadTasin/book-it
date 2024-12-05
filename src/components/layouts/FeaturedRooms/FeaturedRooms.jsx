@@ -15,7 +15,9 @@ const FeaturedRooms = () => {
   useEffect(() => {
     const fetchRooms = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/rooms");
+        const response = await fetch(
+          "https://book-it-silk.vercel.app/api/rooms"
+        );
         const data = await response.json();
         setRoomsData(data); // Update state with the fetched room data
       } catch (error) {
@@ -29,7 +31,7 @@ const FeaturedRooms = () => {
   const handleDelete = async (roomId) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/rooms/${roomId}`,
+        `https://book-it-silk.vercel.app/api/rooms/${roomId}`,
         {
           method: "DELETE",
         }
